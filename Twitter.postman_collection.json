@@ -1,0 +1,362 @@
+{
+	"info": {
+		"_postman_id": "03ef4fe8-1955-4f96-844c-03aad8cd5d83",
+		"name": "Twitter",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\" : \"user3\",\n\t\"password\": \"123456\"\n}"
+				},
+				"url": {
+					"raw": "https://twitterapi.liara.run/api/login",
+					"protocol": "https",
+					"host": [
+						"twitterapi",
+						"liara",
+						"run"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"ali\",\n\t\"username\" : \"user3\",\n\t\"password\": \"123456\"\n}"
+				},
+				"url": {
+					"raw": "https://twitterapi.liara.run/api/register",
+					"protocol": "https",
+					"host": [
+						"twitterapi",
+						"liara",
+						"run"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "newTweet",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjJhOWYyNTJkZDJhNTAwMjA4YjM4NDgiLCJpYXQiOjE1OTY2Mjg3ODl9._qBwENCkmyylrI1nHBw9PAqKLDlYpzuxXaWr5X1QKlQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "text",
+							"value": "توییت جدید ",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": ""
+						}
+					]
+				},
+				"url": {
+					"raw": "https://twitterapi.liara.run/api/newTweet",
+					"protocol": "https",
+					"host": [
+						"twitterapi",
+						"liara",
+						"run"
+					],
+					"path": [
+						"api",
+						"newTweet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getProfile",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "x-auth-token",
+						"type": "text",
+						"value": "1eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjA5ZGUxN2E1YWNmNDM0ZWM0NzE4MDMiLCJpYXQiOjE1OTQ2MjQyNTB9.p1ZD5Q5WimF69HmYvATeZnCmG3CzWg3H3Z7L9Ukv-c8"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://twitterapi.liara.run/api/getProfile",
+					"protocol": "https",
+					"host": [
+						"twitterapi",
+						"liara",
+						"run"
+					],
+					"path": [
+						"api",
+						"getProfile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUsers",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "x-auth-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjA5ZGUxN2E1YWNmNDM0ZWM0NzE4MDMiLCJpYXQiOjE1OTQ2MjQyNTB9.p1ZD5Q5WimF69HmYvATeZnCmG3CzWg3H3Z7L9Ukv-c8"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://twitterapi.liara.run/api/getAllUser",
+					"protocol": "https",
+					"host": [
+						"twitterapi",
+						"liara",
+						"run"
+					],
+					"path": [
+						"api",
+						"getAllUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllHashTags",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "x-auth-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjA5ZGUxN2E1YWNmNDM0ZWM0NzE4MDMiLCJpYXQiOjE1OTQ2MjQyNTB9.p1ZD5Q5WimF69HmYvATeZnCmG3CzWg3H3Z7L9Ukv-c8"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://twitterapi.liara.run/api/getAllHashTags",
+					"protocol": "https",
+					"host": [
+						"twitterapi",
+						"liara",
+						"run"
+					],
+					"path": [
+						"api",
+						"getAllHashTags"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "uploadUserPhoto",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "multipart/form-data"
+					},
+					{
+						"key": "x-auth-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjA5ZGUxN2E1YWNmNDM0ZWM0NzE4MDMiLCJpYXQiOjE1OTQ0ODIyOTl9.yBijggpSP5YE8RS_pqKDI1IO8Qk78-bNpn6v2kIf864"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": ""
+						}
+					]
+				},
+				"url": {
+					"raw": "https://twitterapi.liara.run/api/uploadUserPhoto",
+					"protocol": "https",
+					"host": [
+						"twitterapi",
+						"liara",
+						"run"
+					],
+					"path": [
+						"api",
+						"uploadUserPhoto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "likeTweet",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "x-auth-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjA2ZTBkNWIxZDAxOTU4ZGM2Zjg4NTMiLCJpYXQiOjE1OTQyODc2MTJ9.NNU3d_bP2gpFiqETp8L5eEkDz3zra8e8znQzj5Ykxvg"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://twitterapi.liara.run/api/likeTweet/45454545454",
+					"protocol": "https",
+					"host": [
+						"twitterapi",
+						"liara",
+						"run"
+					],
+					"path": [
+						"api",
+						"likeTweet",
+						"45454545454"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "loadTweets",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "x-auth-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjJhOWYyNTJkZDJhNTAwMjA4YjM4NDgiLCJpYXQiOjE1OTY2Mjg3ODl9._qBwENCkmyylrI1nHBw9PAqKLDlYpzuxXaWr5X1QKlQ"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://twitterapi.liara.run/api/getAllTweet",
+					"protocol": "https",
+					"host": [
+						"twitterapi",
+						"liara",
+						"run"
+					],
+					"path": [
+						"api",
+						"getAllTweet"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
